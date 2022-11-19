@@ -1,4 +1,4 @@
 # Crud-Node.js
 
 
-Simple crud application, Mysql,Node.js and express
+Simple crud application,using  Mysql,Node.js and express
