@@ -1,0 +1,29 @@
+
+
+    <%layout('/layouts/boilerplate')-%> 
+  <div class="mt-4">
+    <h1 class="text-muted">List of  Employees</h1>
+  </div>
+
+
+  
+        <% for(let dat of data){ %> 
+            <div class="card mb-3 border-1 w-50 card-rounded">
+                <div class="row">
+                     <div class="col-md-8">
+                     <div class="card-body">
+                         <h5 class="card-title"><%= dat.Name %></h5>
+                         <p class="card-text"><%= dat.EmpCode %></p>
+                         <p class="card-text">
+                         <small class="text-muted"><%= dat.Salary %></small>    
+                         </p>
+                         <a href="/employee/show/<%= dat.EmpID %>" class="btn btn-primary">View #<%= dat.EmpID %></a>
+                       </div>
+                 </div>
+               </div>
+             </div>
+      
+            <% } %> 
+
+
+ 

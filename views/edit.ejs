@@ -1,0 +1,35 @@
+
+
+<%layout('/layouts/boilerplate')-%> 
+<div class="row">
+    <h1 class="text-center">Update Employee</h1>
+    <div class="col-6 offset-3">
+        <% for(let dat of data) {%> 
+    
+            <form action="/employee/edit/<%= dat.EmpID %>?_method=PUT " method="post">
+        <div class="mb-3">
+            <label class="form-label" for="Name">Name</label>
+            <input class="form-control" type="text" id="Name" name="Name" value="<%=dat.Name%>" required>
+        </div>
+
+        <div class="mb-3">
+    
+        <label class="form-label" for="EmpCode">Employee's Code</label>
+        <input class="form-control" type="text" id="EmpCode" name="EmpCode" value="<%=dat.EmpCode%>" required>
+        </div>
+
+
+        <div class="mb-3">
+     
+            
+        <label class="form-label" for="Salary">Salary</label>
+        <input class="form-control" type="number" id="Salary" name="Salary" value="<%=dat.Salary%>" required>
+        
+         </div>
+         <div class="mb-3">
+            <a href="/employee/show/<%= dat.EmpID %>" class="btn btn-warning">Cancel</a>
+        <button type="submit" class="btn btn-success">Submit</button>
+     
+       </div>
+    </form>
+    <% } %> 

@@ -1,0 +1,38 @@
+<%layout('/layouts/boilerplate')-%> 
+<div class="row">
+    <h1 class="text-center">Add Employee</h1>
+    <div class="col-6 offset-3">
+
+    
+    <form action="/employee/new"  method="post">
+        <div class="mb-3">
+            <label class="form-label" for="Name">Name</label>
+            <input class="form-control" type="text" id="Name" name="Name" required>
+        </div>
+
+        <div class="mb-3">
+    
+        <label class="form-label" for="EmpCode">Employee's Code</label>
+        <input class="form-control" type="text" id="EmpCode" name="EmpCode" required>
+        </div>
+
+
+        <div class="mb-3">
+     
+            
+        <label class="form-label" for="Salary">Salary</label>
+        <input class="form-control" type="number" id="Salary" name="Salary" required>
+        
+         </div>
+         <div class="mb-3">
+            <a href="/employee" class="btn btn-warning">Cancel</a>
+        <button type="submit" class="btn btn-success">Submit</button>
+     
+       </div>
+    </form>
+
+
+
+  
+    </div>
+    </div>
